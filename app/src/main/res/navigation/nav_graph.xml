@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/orders">
+
+    <fragment
+        android:id="@+id/ingredients"
+        android:name="ir.drax.dindinn.ui.ingredients.IngredientsFragment"
+        android:label="Ingredients"
+        tools:layout="@layout/fragment_ingredients">
+    </fragment>
+
+    <fragment
+        android:id="@+id/orders"
+        android:name="ir.drax.dindinn.ui.orders.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders"
+        >
+    </fragment>
+</navigation>

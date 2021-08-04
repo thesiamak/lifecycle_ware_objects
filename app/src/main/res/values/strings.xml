@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DinDinn</string>
+    <string name="error_not_found">Not found!( change message in strings.xml)</string>
+    <string name="network_unavailable">Network error!( change message in strings.xml)</string>
+    <string name="error_internal">Internal server error!( change message in strings.xml)</string>
+    <string name="error_unauthorized">Unauthorized access error!( change message in strings.xml)</string>
+    <string name="unknown_error">Unknown error!( change message in strings.xml)</string>
 </resources>
