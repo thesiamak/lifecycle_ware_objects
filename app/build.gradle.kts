@@ -5,7 +5,6 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     kotlin("android.extensions")
-    kotlin("parcelize")
 
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -47,7 +46,7 @@ android {
 
         getByName("debug"){
             isMinifyEnabled = false
-            buildConfigField("String", "API_BASE_URL", "127.0.0.1/")
+            buildConfigField("String", "API_BASE_URL", "\"https://dindinn.com/\"")
 
         }
     }

@@ -4,13 +4,13 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.dotin.app.model.Address
+import ir.drax.dindinn.network.model.Order
 
 @Dao
-interface AddressDao {
+interface OrderDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(address:Address)
+    suspend fun add(order: Order)
 
-    @Query("SELECT * FROM address")
-    suspend fun get(): List<Address>
+    @Query("SELECT * FROM `order`")
+    suspend fun getAll(): List<Order>
 }

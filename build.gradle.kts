@@ -2,15 +2,16 @@
 val tmpVal = ""
 buildscript {
 
-    val appVersionName :String by extra("interviewTest0.1.")
-    var appReleaseFileName :String by extra("")
-    val lifecycleVersion :String by extra( "2.2.0")
-    val kotlin :String by extra( "1.5.0")
-    val dagger :String by extra( "2.35.1")
+        val appVersionName :String by extra("dev0.1.")
+        var appReleaseFileName :String by extra("")
+        val lifecycleVersion :String by extra( "2.2.0")
+        val kotlin :String by extra( "1.5.10")
+        val dagger :String by extra( "2.35")
 
 
     repositories {
         google()
+        mavenCentral()
         jcenter()
         maven("https://maven.google.com")
         maven("https://jitpack.io")
@@ -27,6 +28,7 @@ allprojects {
 
     repositories {
         google()
+        mavenCentral()
         jcenter()
         maven("https://jitpack.io" )
     }

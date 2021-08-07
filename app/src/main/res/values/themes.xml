@@ -10,4 +10,8 @@
         <item name="android:textColorSecondaryInverse">@color/teal_700</item>
         <item name="android:textColorSecondary">@color/black</item>
     </style>
+    <style name="orderId" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

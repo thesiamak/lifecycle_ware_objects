@@ -1,0 +1,126 @@
+{
+  "status": {
+    "success": true,
+    "statusCode": 200,
+    "message": "success"
+  },
+  "data": [
+    {
+      "id": 10,
+      "title": "Special extra large fried rice",
+      "addon": [
+        {
+          "id": 21,
+          "title": "Fried Egg",
+          "quantity": 3
+        }
+      ],
+      "quantity": 1,
+      "created_at": "2021-06-10T15:00+00Z",
+      "alerted_at": "2021-06-10T15:03+00Z",
+      "expired_at": "2021-06-10T15:05+00Z"
+    },
+    {
+      "id": 11,
+      "title": "Chicken Noodle",
+      "addon": [
+        {
+          "id": 26,
+          "title": "Extra chicken",
+          "quantity": 2
+        },
+        {
+          "id": 27,
+          "title": "Sambal",
+          "quantity": 1
+        }
+      ],
+      "quantity": 1,
+      "created_at": "2021-06-10T15:10+00Z",
+      "alerted_at": "2021-06-10T15:13+00Z",
+      "expired_at": "2021-06-10T15:15+00Z"
+    },{
+      "id": 12,
+      "title": "Hamburger",
+      "addon": [
+        {
+          "id": 30,
+          "title": "Fried potatoes",
+          "quantity": 3
+        },
+        {
+          "id": 5,
+          "title": "Salad",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "title": "Hot Sausage",
+          "quantity": 12
+        }
+      ],
+      "quantity": 5,
+      "created_at": "2021-06-10T15:20+00Z",
+      "alerted_at": "2021-06-10T15:21+00Z",
+      "expired_at": "2021-06-10T15:25+00Z"
+    },{
+      "id": 13,
+      "title": "Special extra large fried rice",
+      "addon": [
+        {
+          "id": 21,
+          "title": "Fried Egg",
+          "quantity": 1
+        }
+      ],
+      "quantity": 2,
+      "created_at": "2021-06-10T15:10+00Z",
+      "alerted_at": "2021-06-10T15:13+00Z",
+      "expired_at": "2021-06-10T15:15+00Z"
+    },
+    {
+      "id": 14,
+      "title": "Chicken Noodle",
+      "addon": [
+        {
+          "id": 26,
+          "title": "Extra chicken",
+          "quantity": 1
+        },
+        {
+          "id": 27,
+          "title": "Sambal",
+          "quantity": 5
+        }
+      ],
+      "quantity": 5,
+      "created_at": "2021-06-10T15:15+00Z",
+      "alerted_at": "2021-06-10T15:18+00Z",
+      "expired_at": "2021-06-10T15:20+00Z"
+    },{
+      "id": 15,
+      "title": "Hamburger",
+      "addon": [
+        {
+          "id": 30,
+          "title": "Fried potatoes",
+          "quantity": 1
+        },
+        {
+          "id": 5,
+          "title": "Salad",
+          "quantity": 15
+        },
+        {
+          "id": 11,
+          "title": "Hot Sausage",
+          "quantity": 1
+        }
+      ],
+      "quantity": 2,
+      "created_at": "2021-06-10T15:22+00Z",
+      "alerted_at": "2021-06-10T15:23+00Z",
+      "expired_at": "2021-06-10T15:27+00Z"
+    }
+  ]
+}
