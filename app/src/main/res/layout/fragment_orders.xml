@@ -7,11 +7,33 @@
             type="ir.drax.dindinn.ui.SharedViewModel" />
     </data>
     <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/appbar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/gotoIngredient"
+                android:text="@string/ingredients"
+                android:background="@color/input_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                app:drawableStartCompat="@drawable/ic_outline_assignment_24" />
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
     </LinearLayout>
 </layout>

@@ -16,7 +16,9 @@
         android:id="@+id/orders"
         android:name="ir.drax.dindinn.ui.orders.OrdersFragment"
         android:label="Orders"
-        tools:layout="@layout/fragment_orders"
-        >
+        tools:layout="@layout/fragment_orders">
+        <action android:id="@+id/ordersToIngredients"
+            app:destination="@id/ingredients"
+            />
     </fragment>
 </navigation>

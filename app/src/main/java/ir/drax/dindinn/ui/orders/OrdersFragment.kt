@@ -2,6 +2,7 @@ package ir.drax.dindinn.ui.orders
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ir.drax.dindinn.databinding.FragmentOrdersBinding
 import ir.drax.dindinn.ui.BaseFragment
@@ -21,14 +22,18 @@ class OrdersFragment : BaseFragment<FragmentOrdersBinding, SharedViewModel>(Frag
         }
 
         viewModel.orders.observe(viewLifecycleOwner){
-            ordersListAdapter.repositories = it
+            if (it == null)
+                viewModel.getOrders()
+            ordersListAdapter.orders = it
         }
-
-        viewModel.getOrders()
 
         list.apply {
             adapter = ordersListAdapter
             layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+        }
+
+        gotoIngredient.setOnClickListener {
+            findNavController().navigate(OrdersFragmentDirections.ordersToIngredients())
         }
     }
 }

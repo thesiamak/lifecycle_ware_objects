@@ -11,4 +11,5 @@
     <string name="protein"># Protein</string>
     <string name="expired">Expired</string>
     <string name="search_hint">Search for an item</string>
+    <string name="ingredients">Ingredients</string>
 </resources>
