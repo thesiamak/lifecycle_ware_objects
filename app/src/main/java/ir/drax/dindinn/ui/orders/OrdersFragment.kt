@@ -2,9 +2,7 @@ package ir.drax.dindinn.ui.orders
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import ir.drax.dindinn.databinding.FragmentOrdersBinding
 import ir.drax.dindinn.ui.BaseFragment
 import ir.drax.dindinn.ui.SharedViewModel
@@ -18,7 +16,7 @@ class OrdersFragment : BaseFragment<FragmentOrdersBinding, SharedViewModel>(Frag
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        ordersListAdapter = OrdersListAdapter {
+        ordersListAdapter = OrdersListAdapter(viewLifecycleOwner) {
 
         }
 

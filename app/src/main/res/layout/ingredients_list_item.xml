@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="addon"
+            type="ir.drax.dindinn.network.model.Addon" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/countsStr"
+            app:layout_constraintBottom_toBottomOf="@id/countNum"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/countNum"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/countsStr"
+            android:textSize="@dimen/heading"
+            android:text="@{String.valueOf(addon.quantity)}"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/addonName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/countNum"
+            android:layout_marginStart="4dp"
+            android:textSize="@dimen/heading"
+            android:text="@{addon.title}"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/protein"
+            app:layout_constraintTop_toBottomOf="@id/addonName"
+            app:layout_constraintStart_toStartOf="@id/addonName"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/large"
+            android:text="@string/protein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

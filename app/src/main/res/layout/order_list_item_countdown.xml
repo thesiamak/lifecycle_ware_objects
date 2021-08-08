@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="remainingMinutes"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            style="@style/countdownItem"
+            android:background="@{remainingMinutes==4? @drawable/countdown_item_active_green :@drawable/countdown_item_inactive}" />
+
+        <View
+            style="@style/countdownItem"
+            android:background="@{remainingMinutes > 2 ? @drawable/countdown_item_active_green :@drawable/countdown_item_inactive}"
+            />
+
+        <View
+            style="@style/countdownItem"
+            android:background="@{remainingMinutes > 2? @drawable/countdown_item_active_green : remainingMinutes == 2 ? @drawable/countdown_item_active_red : @drawable/countdown_item_inactive}"
+            />
+
+        <View
+            style="@style/countdownItem"
+            android:background="@{remainingMinutes > 2? @drawable/countdown_item_active_green : remainingMinutes >= 1 ? @drawable/countdown_item_active_red : @drawable/countdown_item_inactive}"
+            />
+
+        <View
+            style="@style/countdownItem"
+            android:background="@{remainingMinutes > 2? @drawable/countdown_item_active_green : remainingMinutes >= 0 ? @drawable/countdown_item_active_red : @drawable/countdown_item_inactive}" />
+
+    </LinearLayout>
+</layout>

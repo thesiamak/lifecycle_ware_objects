@@ -57,5 +57,5 @@ class NetworkModule {
     @Provides
     @Singleton
     @Named("MockInterceptor")
-    fun provideMockInterceptor(context:Context): Interceptor = MockInterceptor(context.resources)
+    fun provideMockInterceptor(): Interceptor = MockInterceptor()
 }

@@ -5,4 +5,10 @@
     <string name="error_internal">Internal server error!( change message in strings.xml)</string>
     <string name="error_unauthorized">Unauthorized access error!( change message in strings.xml)</string>
     <string name="unknown_error">Unknown error!( change message in strings.xml)</string>
+    <string name="auto_reject">Auto reject</string>
+    <string name="at">at</string>
+    <string name="accept">Accept</string>
+    <string name="protein"># Protein</string>
+    <string name="expired">Expired</string>
+    <string name="search_hint">Search for an item</string>
 </resources>
