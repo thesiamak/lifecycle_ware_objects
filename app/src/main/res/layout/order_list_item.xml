@@ -24,7 +24,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 style="@style/orderId"
-                android:text="@{`#`+order.id}"
+                android:text="@{`#`+order.code}"
                 android:textSize="24sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

@@ -18,7 +18,7 @@ class Converters {
         @TypeConverter
         @JvmStatic
         fun jsonToListOfAddons(value: String?):List<Addon>?{
-            val listType = object : TypeToken<List<Order>>() {}.type
+            val listType = object : TypeToken<List<Addon>>() {}.type
             return Gson().fromJson(value, listType)
         }
     }

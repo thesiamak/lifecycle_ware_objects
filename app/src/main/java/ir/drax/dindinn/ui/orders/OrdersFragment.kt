@@ -1,6 +1,7 @@
 package ir.drax.dindinn.ui.orders
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,14 +23,19 @@ class OrdersFragment : BaseFragment<FragmentOrdersBinding, SharedViewModel>(Frag
         ordersListAdapter = OrdersListAdapter(viewLifecycleOwner,
             onItemAccepted = {
                 message(R.string.item_accepted)
-
+                viewModel.deleteOrder(it)
             },
             onItemExpired= {
                 // Show a different message here.
+                viewModel.deleteOrder(it)
             })
 
         viewModel.orders.observe(viewLifecycleOwner){
-            ordersListAdapter.add(it)
+            Log.e("orders size","${it.size}")
+            if (it.isEmpty())
+                viewModel.updateOrders()
+
+                ordersListAdapter.add(it)
         }
 
         list.apply {

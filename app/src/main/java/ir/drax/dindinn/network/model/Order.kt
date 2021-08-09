@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-open class Order(@PrimaryKey val id:Int,
+open class Order(@PrimaryKey(autoGenerate = true) val id:Long,
                  val title:String,
                  val addon:List<Addon>,
                  val quantity:Int,

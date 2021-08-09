@@ -25,7 +25,7 @@ class MockInterceptor: Interceptor {
                     Gson().toJson(
                         ServerResponse(
                         listOf(
-                            Order(120,"Large rice", listOf(
+                            Order(0,"Large rice", listOf(
                                 Addon(21,"Fried Egg",1)
                             ),1,
                                 created_at= now.plusMillis(TimeUnit.SECONDS.toMillis(0)).toString(),
@@ -33,7 +33,7 @@ class MockInterceptor: Interceptor {
                                 expired_at= now.plusMillis(TimeUnit.MINUTES.toMillis(5)).toString(),
                             ),
 
-                            Order(121,"Second Large rice", listOf(
+                            Order(0,"Second Large rice", listOf(
                                 Addon(22,"Second Fried Egg",1),
                                 Addon(22,"Second Chicken",5),
                                 Addon(22,"Second Salad",2)
@@ -43,7 +43,7 @@ class MockInterceptor: Interceptor {
                                 expired_at= now.plusMillis(TimeUnit.MINUTES.toMillis(5)).toString(),
                                 ),
 
-                            Order(122,"Third Large rice", listOf(
+                            Order(0,"Third Large rice", listOf(
                                 Addon(23,"Third Fried Egg",2),
                                 Addon(23,"Third Chicken",1),
                             ),7,
@@ -52,7 +52,7 @@ class MockInterceptor: Interceptor {
                                 expired_at= now.plusMillis(TimeUnit.MINUTES.toMillis(6)).toString(),
                                 ),
 
-                            Order(123,"Fourth Large rice", listOf(
+                            Order(0,"Fourth Large rice", listOf(
                                 Addon(23,"Fourth Fried Egg",5),
                                 Addon(23,"Fourth Salad",2),
                                 Addon(23,"Fourth Chicken",1),
@@ -63,7 +63,7 @@ class MockInterceptor: Interceptor {
                                 expired_at= now.plusMillis(TimeUnit.MINUTES.toMillis(6)).toString(),
                                 ),
 
-                            Order(124,"Fifth Large rice", listOf(
+                            Order(0,"Fifth Large rice", listOf(
                                 Addon(23,"Fifth Fried Egg",6)
                             ),3,
                                 created_at= now.plusMillis(TimeUnit.SECONDS.toMillis(60)).toString(),
@@ -71,7 +71,7 @@ class MockInterceptor: Interceptor {
                                 expired_at= now.plusMillis(TimeUnit.MINUTES.toMillis(6)).toString(),
                                 ),
 
-                            Order(125,"Sixth Large rice", listOf(
+                            Order(0,"Sixth Large rice", listOf(
                                 Addon(23,"Sixth Fried Egg",1)
                             ),2,
                                 created_at= now.plusMillis(TimeUnit.SECONDS.toMillis(85)).toString(),

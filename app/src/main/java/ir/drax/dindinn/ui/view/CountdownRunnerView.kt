@@ -8,6 +8,9 @@ import android.widget.LinearLayout
 import androidx.databinding.BindingAdapter
 import androidx.databinding.InverseBindingAdapter
 import androidx.databinding.InverseBindingListener
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -17,7 +20,7 @@ import java.util.concurrent.TimeUnit
 
 class CountdownRunner @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : LinearLayout(context, attrs, defStyleAttr) {
+) : LinearLayout(context, attrs, defStyleAttr), LifecycleObserver {
 
     var onValueChanged: () -> Unit = {}
     private val binding = OrderListItemCountdownBinding.inflate(LayoutInflater.from(context), this, true)
@@ -33,25 +36,35 @@ class CountdownRunner @JvmOverloads constructor(
 
     private var timerDisposable:Disposable?=null
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     @SuppressLint("CheckResult")
     fun triggerTimer(){
+        clear()
+
         val diff = TimeUnit.MILLISECONDS.toSeconds(expiresAt - System.currentTimeMillis())
         if (diff > 0)
             timerDisposable = Observable.interval(1, TimeUnit.SECONDS)
                 .take(diff + 1)
                 .observeOn(AndroidSchedulers.mainThread()).subscribe {
                     println(it)
-                    onValueChanged()
-                    binding.remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(remainingMillis).toInt()
+                    broadcast()
                 }
+        else
+            broadcast()
+
     }
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun clear(){
         timerDisposable?.let {
             if (it.isDisposed.not())
                 it.dispose()
         }
+    }
 
+    private fun broadcast(){
+        onValueChanged()
+        binding.remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(remainingMillis).toInt()
     }
 }
 

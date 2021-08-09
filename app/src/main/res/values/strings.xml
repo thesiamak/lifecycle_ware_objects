@@ -14,4 +14,5 @@
     <string name="ingredients">Ingredients</string>
     <string name="item_accepted">Item accepted!</string>
     <string name="ingredients_desc">Ingredients goes here..</string>
+    <string name="empty_list">No orders are available yet!</string>
 </resources>

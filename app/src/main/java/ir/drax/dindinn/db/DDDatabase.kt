@@ -10,7 +10,7 @@ import ir.drax.dindinn.network.model.Order
 @Database(entities = [
     Order::class
 ],
-    version = 2,
+    version = 9,
     exportSchema = false)
 @TypeConverters(value = [Converters::class])
 abstract class DDDatabase : RoomDatabase() {

@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <import type="android.view.View"/>
         <variable
             name="model"
             type="ir.drax.dindinn.ui.SharedViewModel" />
@@ -11,6 +12,14 @@
         android:background="@color/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:visibility="@{model.isLoading()? View.VISIBLE: View.INVISIBLE}"
+            android:indeterminate="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:id="@+id/appbar"
@@ -35,5 +44,13 @@
             android:id="@+id/list"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"/>
+
+        <TextView
+            android:visibility="@{model.isEmpty()? View.VISIBLE:View.GONE}"
+            android:text="@string/empty_list"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"/>
+
     </LinearLayout>
 </layout>
