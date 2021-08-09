@@ -8,13 +8,19 @@ import ir.drax.dindinn.databinding.OrderListItemBinding
 import ir.drax.dindinn.network.model.Order
 import ir.drax.dindinn.network.model.OrderWrapper
 
-class OrdersListAdapter(private val mlifecycleOwner:LifecycleOwner,private val onItemClicked: (Order) -> Unit) : RecyclerView.Adapter<OrdersListAdapter.RepositoryViewHolder>() {
+class OrdersListAdapter(private val mlifecycleOwner:LifecycleOwner,private val onItemAccepted: (Order) -> Unit, private val onItemExpired: (Order) -> Unit) : RecyclerView.Adapter<OrdersListAdapter.RepositoryViewHolder>() {
     // List of repositories
-    var orders: List<Order> = ArrayList(0)
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    var orders: MutableList<Order> = ArrayList(0)
+
+
+    fun add(newOrders:List<Order>){
+        orders.addAll(
+            newOrders.filter {
+                orders.contains(it).not()
+            }
+        )
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
         val binding = OrderListItemBinding.inflate(
@@ -23,9 +29,11 @@ class OrdersListAdapter(private val mlifecycleOwner:LifecycleOwner,private val o
             false
         )
 
-        return RepositoryViewHolder(mlifecycleOwner,binding) {
+        return RepositoryViewHolder(mlifecycleOwner,binding, {
             // callback lambda function and passes the proper data by finding the data based on its position
-            onItemClicked(orders[it])
+            onItemAccepted(orders[it])
+        }){
+            onItemExpired(orders[it])
         }
     }
 
@@ -39,7 +47,9 @@ class OrdersListAdapter(private val mlifecycleOwner:LifecycleOwner,private val o
      * A ViewHolder for the [OrdersListAdapter]
      * Receives @param [onItemClicked] as lambda function. The lambda function is called with the [getAbsoluteAdapterPosition] of selected item
      */
-    inner class RepositoryViewHolder(mlifecycleOwner:LifecycleOwner,private val binding: OrderListItemBinding, onItemClicked: (Int) -> Unit) :
+    inner class RepositoryViewHolder(mlifecycleOwner:LifecycleOwner,private val binding: OrderListItemBinding,
+                                     onItemAccepted: (Int) -> Unit,
+                                     onItemExpired: (Int) -> Unit) :
         RecyclerView.ViewHolder(binding.apply {
             lifecycleOwner = mlifecycleOwner
         }.root
@@ -47,12 +57,13 @@ class OrdersListAdapter(private val mlifecycleOwner:LifecycleOwner,private val o
 
         init {
             binding.acceptBtn.setOnClickListener {
-                onItemClicked(adapterPosition)
-                notifyItemRemoved(adapterPosition)
+                onItemAccepted(adapterPosition)
+                removeItem()
             }
 
             binding.expiredBtn.setOnClickListener {
-                notifyItemRemoved(adapterPosition)
+                onItemExpired(adapterPosition)
+                removeItem()
             }
         }
         fun bind(order: Order) {
@@ -63,6 +74,12 @@ class OrdersListAdapter(private val mlifecycleOwner:LifecycleOwner,private val o
                 }
                 this.addonsList.adapter = AddonsListAdapter(order.addon)
             }
+        }
+
+        private fun removeItem(){
+            binding.rejectCounter.clear()
+            orders.removeAt(adapterPosition)
+            notifyItemRemoved(adapterPosition)
         }
     }
 }

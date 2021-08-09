@@ -1,16 +1,17 @@
 package ir.drax.dindinn.db.inspection
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import ir.drax.dindinn.network.model.Order
 
 @Dao
 interface OrderDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun add(order: Order)
+    fun add(order: Order)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    fun update(order: Order)
 
     @Query("SELECT * FROM `order`")
-    suspend fun getAll(): List<Order>
+    fun getAll(): LiveData<List<Order>>
 }

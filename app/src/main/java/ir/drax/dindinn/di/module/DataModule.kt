@@ -4,6 +4,6 @@ import dagger.Module
 import ir.drax.dindinn.di.module.NetworkModule
 
 @Module(
-    includes = [NetworkModule::class, ReposModule::class]
+    includes = [NetworkModule::class, ReposModule::class, DatabaseModule::class]
 )
 class DataModule

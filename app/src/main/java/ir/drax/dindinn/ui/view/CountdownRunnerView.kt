@@ -20,7 +20,7 @@ class CountdownRunner @JvmOverloads constructor(
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
     var onValueChanged: () -> Unit = {}
-    val binding = OrderListItemCountdownBinding.inflate(LayoutInflater.from(context), this, true)
+    private val binding = OrderListItemCountdownBinding.inflate(LayoutInflater.from(context), this, true)
 
     var expiresAt:Long = 0
 
@@ -44,6 +44,14 @@ class CountdownRunner @JvmOverloads constructor(
                     onValueChanged()
                     binding.remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(remainingMillis).toInt()
                 }
+    }
+
+    fun clear(){
+        timerDisposable?.let {
+            if (it.isDisposed.not())
+                it.dispose()
+        }
+
     }
 }
 

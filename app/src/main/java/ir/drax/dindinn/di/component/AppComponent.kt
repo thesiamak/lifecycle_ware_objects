@@ -9,6 +9,7 @@ import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import ir.drax.dindinn.App
+import ir.drax.dindinn.di.module.DatabaseModule
 import javax.inject.Singleton
 
 @Singleton

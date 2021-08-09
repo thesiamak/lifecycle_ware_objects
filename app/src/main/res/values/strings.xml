@@ -12,4 +12,6 @@
     <string name="expired">Expired</string>
     <string name="search_hint">Search for an item</string>
     <string name="ingredients">Ingredients</string>
+    <string name="item_accepted">Item accepted!</string>
+    <string name="ingredients_desc">Ingredients goes here..</string>
 </resources>

@@ -48,5 +48,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
 
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/grey"
+            android:textStyle="italic"
+            android:textSize="@dimen/heading"
+            android:text="@string/ingredients_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
