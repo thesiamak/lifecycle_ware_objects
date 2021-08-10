@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
         <View
             style="@style/countdownItem"
-            android:background="@{remainingMinutes==4? @drawable/countdown_item_active_green :@drawable/countdown_item_inactive}" />
+            android:background="@{remainingMinutes >= 4? @drawable/countdown_item_active_green :@drawable/countdown_item_inactive}" />
 
         <View
             style="@style/countdownItem"

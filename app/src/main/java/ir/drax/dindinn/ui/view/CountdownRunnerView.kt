@@ -3,6 +3,7 @@ package ir.drax.dindinn.ui.view
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.databinding.BindingAdapter
@@ -14,6 +15,7 @@ import androidx.lifecycle.OnLifecycleEvent
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import ir.drax.dindinn.databinding.OrderListItemCountdownBinding
 import java.time.Instant
 import java.util.concurrent.TimeUnit
@@ -49,9 +51,10 @@ class CountdownRunner @JvmOverloads constructor(
                     println(it)
                     broadcast()
                 }
-        else
-            broadcast()
 
+        else
+
+            broadcast()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
@@ -97,7 +100,7 @@ fun remainingMinChangedInverseBinding(view: CountdownRunner):String{
             it <= 0 -> ""
             it < TimeUnit.MINUTES.toMillis(1) -> "${TimeUnit.MILLISECONDS.toSeconds(it).toInt()} Secs"
             it < TimeUnit.MINUTES.toMillis(5).toInt() -> "${TimeUnit.MILLISECONDS.toMinutes(it).toInt()} Mins"
-            else -> "> 5 mins"
+            else -> "5 mins"
         }
     }
 }

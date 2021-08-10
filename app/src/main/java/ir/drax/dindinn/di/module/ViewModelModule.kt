@@ -2,6 +2,7 @@ package ir.drax.dindinn.di.module
 
 import dagger.Module
 import dagger.Provides
+import ir.drax.dindinn.repository.IngredientsRepository
 import ir.drax.dindinn.repository.OrdersRepository
 import ir.drax.dindinn.ui.SharedViewModel
 import javax.inject.Singleton
@@ -11,6 +12,6 @@ class ViewModelModule{
 
     @Provides
     @Singleton
-    fun provideSharedViewModel(ordersRepository: OrdersRepository)=SharedViewModel(ordersRepository)
+    fun provideSharedViewModel(ordersRepository: OrdersRepository,ingredientsRepository: IngredientsRepository) = SharedViewModel(ordersRepository,ingredientsRepository)
     
 }

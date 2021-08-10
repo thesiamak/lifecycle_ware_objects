@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import ir.drax.dindinn.R
 import ir.drax.dindinn.databinding.FragmentOrdersBinding
 import ir.drax.dindinn.ui.BaseFragment
@@ -20,7 +21,7 @@ class OrdersFragment : BaseFragment<FragmentOrdersBinding, SharedViewModel>(Frag
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        ordersListAdapter = OrdersListAdapter(viewLifecycleOwner,
+        ordersListAdapter = OrdersListAdapter(requireContext(),viewLifecycleOwner,
             onItemAccepted = {
                 message(R.string.item_accepted)
                 viewModel.deleteOrder(it)
@@ -31,7 +32,6 @@ class OrdersFragment : BaseFragment<FragmentOrdersBinding, SharedViewModel>(Frag
             })
 
         viewModel.orders.observe(viewLifecycleOwner){
-            Log.e("orders size","${it.size}")
             if (it.isEmpty())
                 viewModel.updateOrders()
 

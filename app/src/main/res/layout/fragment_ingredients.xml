@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <import type="android.view.View"/>
         <variable
             name="model"
             type="ir.drax.dindinn.ui.SharedViewModel" />
@@ -12,7 +13,8 @@
 
         <ImageView
             android:src="@drawable/ic_baseline_chevron_left_24"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@id/searchInput"
+            app:layout_constraintBottom_toBottomOf="@id/searchInput"
             app:layout_constraintStart_toStartOf="parent"
             android:padding="8dp"
             android:id="@+id/back"
@@ -34,9 +36,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
 
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_constraintTop_toBottomOf="@id/searchInput"
+            android:visibility="@{model.isLoading()? View.VISIBLE: View.INVISIBLE}"
+            android:indeterminate="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
-            app:layout_constraintTop_toBottomOf="@id/searchInput"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabUnboundedRipple="true"
+            app:layout_constraintTop_toBottomOf="@id/progress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -48,16 +63,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
 
-        <TextView
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/grey"
-            android:textStyle="italic"
-            android:textSize="@dimen/heading"
-            android:text="@string/ingredients_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
