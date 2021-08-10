@@ -1,6 +1,5 @@
 package ir.drax.dindinn.unit
 
-import com.interview.blocket.util.TextLoader.getFormattedDate
 import junit.framework.Assert.assertEquals
 import org.junit.Test
 

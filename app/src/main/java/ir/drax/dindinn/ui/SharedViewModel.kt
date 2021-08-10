@@ -2,23 +2,21 @@ package ir.drax.dindinn.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import ir.drax.dindinn.model.Resource
 import ir.drax.dindinn.model.Status
 import ir.drax.dindinn.network.model.Order
 import ir.drax.dindinn.repository.OrdersRepository
-import ir.drax.dindinn.util.ResViewModel
+import ir.drax.dindinn.util.BaseViewModel
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
-import io.reactivex.Completable
 import io.reactivex.disposables.Disposable
 import ir.drax.dindinn.network.model.Ingredient
 import ir.drax.dindinn.repository.IngredientsRepository
 
 
-class SharedViewModel @Inject constructor(private val ordersRepository: OrdersRepository, private val ingredientsRepository: IngredientsRepository): ResViewModel() {
+class SharedViewModel @Inject constructor(private val ordersRepository: OrdersRepository, private val ingredientsRepository: IngredientsRepository): BaseViewModel() {
 
 
     val orders = ordersRepository.getAll()

@@ -100,7 +100,7 @@ fun remainingMinChangedInverseBinding(view: CountdownRunner):String{
             it <= 0 -> ""
             it < TimeUnit.MINUTES.toMillis(1) -> "${TimeUnit.MILLISECONDS.toSeconds(it).toInt()} Secs"
             it < TimeUnit.MINUTES.toMillis(5).toInt() -> "${TimeUnit.MILLISECONDS.toMinutes(it).toInt()} Mins"
-            else -> "5 mins"
+            else -> "more than 5 mins"
         }
     }
 }

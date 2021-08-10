@@ -7,7 +7,7 @@ import io.reactivex.disposables.CompositeDisposable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-abstract class ResViewModel():ViewModel() {
+abstract class BaseViewModel():ViewModel() {
     val isLoading = MutableLiveData(false)
     val isEmpty = MutableLiveData(true)
     val disposable = CompositeDisposable()
