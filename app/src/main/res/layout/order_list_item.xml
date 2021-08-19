@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="order"
-            type="lifecycle.network.model.OrderWrapper" />
+            type="ir.drax.samples.lifecycle.network.model.OrderWrapper" />
     </data>
 
     <RelativeLayout
@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <lifecycle.ui.view.CountdownRunner
+            <ir.drax.samples.lifecycle.ui.view.CountdownRunner
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rejectCounterStr"
                 android:id="@+id/rejectCounter"

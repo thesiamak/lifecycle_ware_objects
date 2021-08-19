@@ -6,11 +6,11 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import io.reactivex.disposables.Disposable
-import ir.drax.samples.lifecycle.databinding.FragmentIngredientsBinding
 import ir.drax.samples.lifecycle.network.model.Type
 import ir.drax.samples.lifecycle.ui.BaseFragment
 import ir.drax.samples.lifecycle.ui.SharedViewModel
 import kotlinx.android.synthetic.main.fragment_ingredients.*
+import lifecycle.databinding.FragmentIngredientsBinding
 
 
 class IngredientsFragment : BaseFragment<FragmentIngredientsBinding, SharedViewModel>(FragmentIngredientsBinding::inflate) {

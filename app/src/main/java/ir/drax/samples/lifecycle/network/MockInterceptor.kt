@@ -1,8 +1,8 @@
 package ir.drax.samples.lifecycle.network
 
 import com.google.gson.Gson
-import ir.drax.samples.lifecycle.BuildConfig
 import ir.drax.samples.lifecycle.network.model.*
+import lifecycle.BuildConfig
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import java.time.Instant
@@ -76,7 +76,8 @@ class MockInterceptor: Interceptor {
                                 expired_at= now.plusMillis(TimeUnit.MINUTES.toMillis(7)).toString(),
                                 ),
 
-                        ), Status(true,requestCode,"success"))
+                        ), Status(true,requestCode,"success")
+                        )
                         )
                 }
                 "v1/ingredients"->{

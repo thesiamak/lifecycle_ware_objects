@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 import dagger.Module
 import dagger.Provides
 import ir.drax.samples.lifecycle.db.DDDatabase
-import ir.drax.samples.lifecycle.db.inspection.OrderDao
+import ir.drax.samples.lifecycle.db.order.OrderDao
 import javax.inject.Singleton
 
 @Module
@@ -24,5 +24,5 @@ class DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideOrderDao(ddDatabase: DDDatabase):OrderDao = ddDatabase.orderDao()
+    fun provideOrderDao(ddDatabase: DDDatabase): OrderDao = ddDatabase.orderDao()
 }

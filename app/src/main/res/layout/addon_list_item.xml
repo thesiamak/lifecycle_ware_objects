@@ -4,7 +4,7 @@
     <data>
         <variable
             name="addon"
-            type="lifecycle.network.model.Addon" />
+            type="ir.drax.samples.lifecycle.network.model.Addon" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="8dp"

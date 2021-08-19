@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import ir.drax.samples.lifecycle.R
-import ir.drax.samples.lifecycle.databinding.FragmentOrdersBinding
 import ir.drax.samples.lifecycle.ui.BaseFragment
 import ir.drax.samples.lifecycle.ui.SharedViewModel
 import ir.drax.samples.lifecycle.util.message
 import kotlinx.android.synthetic.main.fragment_orders.*
+import lifecycle.R
+import lifecycle.databinding.FragmentOrdersBinding
 
 
 class OrdersFragment : BaseFragment<FragmentOrdersBinding, SharedViewModel>(FragmentOrdersBinding::inflate) {

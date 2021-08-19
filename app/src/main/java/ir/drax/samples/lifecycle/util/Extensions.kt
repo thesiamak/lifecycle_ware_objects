@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import ir.drax.samples.lifecycle.R
+import lifecycle.R
 import ir.drax.modal.Modal
 import ir.drax.modal.ModalBuilder
 import ir.drax.modal.model.MoButton

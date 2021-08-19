@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="model"
-            type="lifecycle.ui.SharedViewModel" />
+            type="ir.drax.samples.lifecycle.ui.SharedViewModel" />
     </data>
     <LinearLayout
         android:orientation="vertical"

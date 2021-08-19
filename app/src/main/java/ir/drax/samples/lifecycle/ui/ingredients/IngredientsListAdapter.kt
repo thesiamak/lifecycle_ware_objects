@@ -3,8 +3,8 @@ package ir.drax.samples.lifecycle.ui.ingredients
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ir.drax.samples.lifecycle.databinding.IngredientsListItemBinding
 import ir.drax.samples.lifecycle.network.model.Ingredient
+import lifecycle.databinding.IngredientsListItemBinding
 
 class IngredientsListAdapter : RecyclerView.Adapter<IngredientsListAdapter.IngredientViewHolder>() {
 

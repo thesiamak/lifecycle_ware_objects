@@ -1,4 +1,4 @@
-package ir.drax.samples.lifecycle.db.inspection
+package ir.drax.samples.lifecycle.db.order
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

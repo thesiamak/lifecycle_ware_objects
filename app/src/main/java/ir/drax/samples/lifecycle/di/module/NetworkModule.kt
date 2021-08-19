@@ -2,10 +2,10 @@ package ir.drax.samples.lifecycle.di.module
 
 import dagger.Module
 import dagger.Provides
-import ir.drax.samples.lifecycle.BuildConfig
 import ir.drax.samples.lifecycle.di.RequestInterceptor
 import ir.drax.samples.lifecycle.network.DDApiService
 import ir.drax.samples.lifecycle.network.MockInterceptor
+import lifecycle.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

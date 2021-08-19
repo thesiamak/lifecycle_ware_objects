@@ -13,11 +13,13 @@
         <entry key="app/src/main/res/drawable/ic_outline_info_24.xml" value="0.3490740740740741" />
         <entry key="app/src/main/res/drawable/ic_outline_save_24.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout-v23/fragment_ingredients.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/layout/addon_list_item.xml" value="0.20208333333333334" />
         <entry key="app/src/main/res/layout/fragment_ingredients.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.25" />
         <entry key="app/src/main/res/layout/ingredients_list_item.xml" value="0.264" />
         <entry key="app/src/main/res/layout/order_list_item.xml" value="0.16675075681130172" />
         <entry key="app/src/main/res/layout/order_list_item_countdown.xml" value="0.23886986301369864" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.34444444444444444" />
       </map>
     </option>
   </component>

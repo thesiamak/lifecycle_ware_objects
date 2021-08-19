@@ -2,7 +2,7 @@ package ir.drax.samples.lifecycle.util
 
 import android.content.Context
 import android.media.MediaPlayer
-import ir.drax.samples.lifecycle.R
+import lifecycle.R
 
 class SoundUtil {
     companion object{

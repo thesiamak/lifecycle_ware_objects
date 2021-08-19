@@ -14,7 +14,7 @@ import androidx.lifecycle.OnLifecycleEvent
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import ir.drax.samples.lifecycle.databinding.OrderListItemCountdownBinding
+import lifecycle.databinding.OrderListItemCountdownBinding
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 

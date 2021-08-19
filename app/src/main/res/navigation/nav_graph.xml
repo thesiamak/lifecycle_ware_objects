@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/ingredients"
-        android:name="lifecycle.ui.ingredients.IngredientsFragment"
+        android:name="ir.drax.samples.lifecycle.ui.ingredients.IngredientsFragment"
         android:label="Ingredients"
         tools:layout="@layout/fragment_ingredients">
     </fragment>
 
     <fragment
         android:id="@+id/orders"
-        android:name="lifecycle.ui.orders.OrdersFragment"
+        android:name="ir.drax.samples.lifecycle.ui.orders.OrdersFragment"
         android:label="Orders"
         tools:layout="@layout/fragment_orders">
         <action android:id="@+id/ordersToIngredients"

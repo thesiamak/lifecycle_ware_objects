@@ -9,8 +9,8 @@ import kotlinx.coroutines.launch
 
 abstract class BaseViewModel():ViewModel() {
     val isLoading = MutableLiveData(false)
-    val isEmpty = MutableLiveData(true)
-    val isError = MutableLiveData(false)
+    val isEmpty = MutableLiveData<Boolean>()
+    val isError = MutableLiveData<Boolean>()
     val disposable = CompositeDisposable()
 
     override fun onCleared() {

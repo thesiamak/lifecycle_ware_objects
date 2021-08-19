@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
-import ir.drax.samples.lifecycle.db.inspection.OrderDao
+import ir.drax.samples.lifecycle.db.order.OrderDao
 import ir.drax.samples.lifecycle.model.Resource
 import ir.drax.samples.lifecycle.network.DDApiService
 import ir.drax.samples.lifecycle.network.model.Order

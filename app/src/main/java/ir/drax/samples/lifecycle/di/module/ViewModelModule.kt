@@ -12,6 +12,6 @@ class ViewModelModule{
 
     @Provides
     @Singleton
-    fun provideSharedViewModel(ordersRepository: OrdersRepository,ingredientsRepository: IngredientsRepository) = SharedViewModel(ordersRepository,ingredientsRepository)
+    fun provideSharedViewModel(ordersRepository: OrdersRepository, ingredientsRepository: IngredientsRepository) = SharedViewModel(ordersRepository,ingredientsRepository)
     
 }

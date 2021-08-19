@@ -4,7 +4,7 @@
     <data>
         <variable
             name="ingredient"
-            type="lifecycle.network.model.Ingredient" />
+            type="ir.drax.samples.lifecycle.network.model.Ingredient" />
     </data>
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="5dp"

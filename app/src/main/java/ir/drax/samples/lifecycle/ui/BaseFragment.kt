@@ -8,7 +8,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import dagger.android.support.AndroidSupportInjection
-import ir.drax.samples.lifecycle.BR
+import lifecycle.BR
+
 import javax.inject.Inject
 
 

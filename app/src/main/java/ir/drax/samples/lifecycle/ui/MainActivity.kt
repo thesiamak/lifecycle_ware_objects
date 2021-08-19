@@ -2,7 +2,7 @@ package ir.drax.samples.lifecycle.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ir.drax.samples.lifecycle.R
+import lifecycle.R
 
 
 class MainActivity : AppCompatActivity() {

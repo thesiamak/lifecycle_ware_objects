@@ -1,4 +1,4 @@
-package ir.drax.samples.lifecycle.db.inspection
+package ir.drax.samples.lifecycle.db.order
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson

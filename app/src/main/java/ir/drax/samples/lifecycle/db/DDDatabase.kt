@@ -3,8 +3,7 @@ package ir.drax.samples.lifecycle.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import ir.drax.samples.lifecycle.db.inspection.Converters
-import ir.drax.samples.lifecycle.db.inspection.OrderDao
+import ir.drax.samples.lifecycle.db.order.OrderDao
 import ir.drax.samples.lifecycle.network.model.Order
 
 @Database(entities = [
@@ -12,7 +11,7 @@ import ir.drax.samples.lifecycle.network.model.Order
 ],
     version = 9,
     exportSchema = false)
-@TypeConverters(value = [Converters::class])
+@TypeConverters(value = [ir.drax.samples.lifecycle.db.order.Converters::class])
 abstract class DDDatabase : RoomDatabase() {
 
     abstract fun orderDao(): OrderDao

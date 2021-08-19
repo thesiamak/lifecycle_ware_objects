@@ -1,14 +1,14 @@
 package ir.drax.samples.lifecycle.di.component
 
 import android.content.Context
-import ir.drax.samples.lifecycle.di.module.ActivityBuilderModule
-import ir.drax.samples.lifecycle.di.module.DataModule
-import ir.drax.samples.lifecycle.di.module.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import ir.drax.samples.lifecycle.App
+import ir.drax.samples.lifecycle.di.module.ActivityBuilderModule
+import ir.drax.samples.lifecycle.di.module.DataModule
+import ir.drax.samples.lifecycle.di.module.ViewModelModule
 import javax.inject.Singleton
 
 @Singleton

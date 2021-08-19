@@ -4,16 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import ir.drax.samples.lifecycle.model.Resource
-import ir.drax.samples.lifecycle.model.Status
-import ir.drax.samples.lifecycle.network.model.Order
-import ir.drax.samples.lifecycle.repository.OrdersRepository
-import ir.drax.samples.lifecycle.util.BaseViewModel
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import io.reactivex.disposables.Disposable
+import ir.drax.samples.lifecycle.model.Resource
+import ir.drax.samples.lifecycle.model.Status
 import ir.drax.samples.lifecycle.network.model.Ingredient
+import ir.drax.samples.lifecycle.network.model.Order
 import ir.drax.samples.lifecycle.repository.IngredientsRepository
+import ir.drax.samples.lifecycle.repository.OrdersRepository
+import ir.drax.samples.lifecycle.util.BaseViewModel
 
 
 class SharedViewModel @Inject constructor(private val ordersRepository: OrdersRepository, private val ingredientsRepository: IngredientsRepository): BaseViewModel() {
@@ -40,7 +40,7 @@ class SharedViewModel @Inject constructor(private val ordersRepository: OrdersRe
                 { resource ->
                     setViewState(resource)
 
-                    if (resource.status==Status.SUCCESS)
+                    if (resource.status== Status.SUCCESS)
                         _ingredients.postValue(resource.data)
                 },
                 {

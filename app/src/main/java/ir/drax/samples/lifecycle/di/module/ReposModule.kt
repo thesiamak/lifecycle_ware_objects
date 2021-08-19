@@ -2,7 +2,7 @@ package ir.drax.samples.lifecycle.di.module
 
 import dagger.Module
 import dagger.Provides
-import ir.drax.samples.lifecycle.db.inspection.OrderDao
+import ir.drax.samples.lifecycle.db.order.OrderDao
 import ir.drax.samples.lifecycle.network.DDApiService
 import ir.drax.samples.lifecycle.repository.IngredientsRepository
 import ir.drax.samples.lifecycle.repository.IngredientsRepositoryImpl
