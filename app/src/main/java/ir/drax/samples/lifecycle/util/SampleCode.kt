@@ -1,8 +1,13 @@
 package ir.drax.samples.lifecycle.util
 
+import android.content.Context
+import android.util.AttributeSet
+import android.widget.LinearLayout
+import androidx.lifecycle.LifecycleObserver
 import java.util.*
 
-class SampleCode {
+class DisplayTimer (context: Context) : LinearLayout(context), LifecycleObserver {
+
     fun igniteTimer(){
         Timer("ring the bell")
             .schedule(object : TimerTask() {
@@ -14,6 +19,6 @@ class SampleCode {
     }
 
     private fun Ring() {
-        TODO("Not yet implemented")
+        // ring the bell here
     }
 }
