@@ -37,7 +37,7 @@ android {
                 variant.outputs
                     .map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
                     .forEach { output ->
-                        output.outputFileName = "dindinn_${variant.buildType.name}_${defaultConfig.versionName}" +
+                        output.outputFileName = "lifecycleTest_${variant.buildType.name}_${defaultConfig.versionName}" +
                                 "_${Date()}.apk"
                         appReleaseFileName = output.outputFileName
                     }
@@ -46,7 +46,7 @@ android {
 
         getByName("debug"){
             isMinifyEnabled = false
-            buildConfigField("String", "API_BASE_URL", "\"https://dindinn.com/\"")
+            buildConfigField("String", "API_BASE_URL", "\"https://google.com/\"")
 
         }
     }
@@ -73,7 +73,7 @@ android {
     val name = "$appVersionName$code"
 
     defaultConfig {
-        applicationId = "ir.drax.dindinn"
+        applicationId = "ir.drax.samples.lifecycle"
         versionName = name
         versionCode = 1
         minSdkVersion(21)

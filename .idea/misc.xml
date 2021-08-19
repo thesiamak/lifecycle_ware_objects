@@ -6,19 +6,14 @@
         <entry key="../../.gradle/caches/transforms-3/6f2c10f7e724cf26daab15a001490265/transformed/jetified-expandable-0.5.6/res/drawable/expandable_header_bg.xml" value="0.30833333333333335" />
         <entry key="../../.gradle/caches/transforms-3/cdce58b0fbe1a65b68f4d13c58f86d17/transformed/jetified-modal-0.5.6/res/drawable/bottom_curved_header.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/drawable/accept_btn_bg.xml" value="0.30833333333333335" />
-        <entry key="app/src/main/res/drawable/available.xml" value="0.28888888888888886" />
-        <entry key="app/src/main/res/drawable/circle.xml" value="0.28888888888888886" />
         <entry key="app/src/main/res/drawable/countdown_item.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/drawable/countdown_item_active.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/drawable/countdown_item_active_green.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/drawable/expire_btn_bg.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/drawable/ic_outline_info_24.xml" value="0.3490740740740741" />
         <entry key="app/src/main/res/drawable/ic_outline_save_24.xml" value="0.2046875" />
-        <entry key="app/src/main/res/drawable/progress_circle.xml" value="0.28888888888888886" />
-        <entry key="app/src/main/res/drawable/unavailable.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout-v23/fragment_ingredients.xml" value="0.34427083333333336" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.34427083333333336" />
-        <entry key="app/src/main/res/layout/addon_list_item.xml" value="0.34427083333333336" />
-        <entry key="app/src/main/res/layout/fragment_ingredients.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/fragment_ingredients.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/layout/ingredients_list_item.xml" value="0.264" />
         <entry key="app/src/main/res/layout/order_list_item.xml" value="0.16675075681130172" />

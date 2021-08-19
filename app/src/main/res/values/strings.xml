@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DinDinn</string>
+    <string name="app_name">Lifecycle Sample</string>
     <string name="error_not_found">Not found!( change message in strings.xml)</string>
     <string name="network_unavailable">Network error!( change message in strings.xml)</string>
     <string name="error_internal">Internal server error!( change message in strings.xml)</string>
@@ -15,4 +15,5 @@
     <string name="item_accepted">Item accepted!</string>
     <string name="ingredients_desc">Ingredients goes here..</string>
     <string name="empty_list">No orders are available yet!</string>
+    <string name="error">Something went wrong! Checkout network.</string>
 </resources>

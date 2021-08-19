@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="model"
-            type="ir.drax.dindinn.ui.SharedViewModel" />
+            type="lifecycle.ui.SharedViewModel" />
     </data>
     <LinearLayout
         android:orientation="vertical"
@@ -42,13 +42,17 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
+            android:visibility="@{model.isEmpty()? View.GONE:model.isError()? View.GONE:View.VISIBLE}"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"/>
 
         <TextView
-            android:visibility="@{model.isEmpty()? View.VISIBLE:View.GONE}"
-            android:text="@string/empty_list"
+            android:id="@+id/errorMessage"
+            android:visibility="@{model.isEmpty()? View.VISIBLE:model.isError()? View.VISIBLE:View.GONE}"
+            android:text="@{model.isError()?@string/error : @string/empty_list}"
             android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/grey"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"/>
 

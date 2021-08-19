@@ -1,2 +1,2 @@
 include(":app")
-rootProject.name = "DinDinn"
+rootProject.name = "Lifecycle Sample"

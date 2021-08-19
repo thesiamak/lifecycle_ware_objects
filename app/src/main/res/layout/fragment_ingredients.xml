@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="model"
-            type="ir.drax.dindinn.ui.SharedViewModel" />
+            type="lifecycle.ui.SharedViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

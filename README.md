@@ -1,8 +1,8 @@
-# dinDinn
-## Sample project for the interview at DinDinn
+# LifeCycle Awareness
+## Sample project to practice a few advanced topics in Android
 
 ### Technologies
-`Arcitecture`: MVVM
+`Architecture`: MVVM
 `Database`: Room
 `DI`: Dagger2
 `Thread system`: RxJava
